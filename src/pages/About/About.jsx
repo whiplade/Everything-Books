@@ -15,10 +15,13 @@ const About = () => {
             <img src = {aboutImg} alt = "" />
           </div>
           <div className='about-text'>
-            <h2 className='about-title fs-26 ls-1'>About BookHub</h2>
-            <p className='fs-17'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos consequuntur vero commodi provident maiores, iusto atque corrupti voluptate vel sequi consectetur unde aliquam corporis saepe animi non, tempora reiciendis molestias sed laudantium dolores. Assumenda aperiam fuga quo voluptate commodi ullam aliquam expedita voluptas delectus.</p>
-            <p className='fs-17'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta, possimus inventore eveniet atque voluptatibus repellendus aspernatur illo aliquam dignissimos illum. Commodi, porro omnis dolore amet neque modi quas eum!</p>
-          </div>
+            <h2 className='about-title fs-26 ls-1'>Everything Books</h2>
+            <p className='fs-17'>Welcome to Everything Books, your go-to destination for exploring the vast world of literature at your fingertips. We believe that every reader deserves an effortless and enriching book-searching experience, and that's exactly what our app is designed to deliver.</p>
+            <h2 className='about-title fs-26 ls-1'>Mission</h2>
+            <p className='fs-17'>Our mission is to connect readers with their next great read. We're passionate about fostering a love for literature and making the journey of discovering new books as enjoyable as the act of reading itself.</p>
+            <h2 className='about-title fs-26 ls-1'>Vision</h2>
+            <p className='fs-17'>We envision a world where every reader, regardless of their preferences or experience level, can easily navigate the vast landscape of literature. By providing a user-friendly platform and fostering a sense of community, we aim to make Everything Books a trusted companion on your reading journey.</p>
+          </div> 
         </div>
       </div>
     </section>
