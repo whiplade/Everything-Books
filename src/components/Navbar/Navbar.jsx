@@ -1,22 +1,28 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useGlobalContext } from '../../context';
 import "./Navbar.css";
 import logoImg from "../../images/logo.png";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
+  const { setSearchTerm } = useGlobalContext();
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleNavbar = () => setToggleMenu(!toggleMenu);
+  const handleLogoClick = () => {
+    console.log("Logo clicked");
+    setSearchTerm("");
+  };
 
   return (
     <nav className='navbar' id = "navbar">
       <div className='container navbar-content flex'>
         <div className='brand-and-toggler flex flex-sb'>
-          <Link to = "/" className='navbar-brand flex'>
+          <Link to = "/" className='navbar-brand flex' onClick={handleLogoClick}>
             <img src = {logoImg} alt = "site logo" />
-            <span className='text-uppercase fw-7 fs-24 ls-1'>bookhub</span>
+            <span className='text-uppercase fw-7 fs-24 ls-1'>Everything Books</span>
           </Link>
-          <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
+          <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar} >
             <HiOutlineMenuAlt3 size = {35} style = {{
               color: `${toggleMenu ? "#fff" : "#010101"}`
             }} />
@@ -29,7 +35,7 @@ const Navbar = () => {
               <Link to = "book" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Home</Link>
             </li>
             <li className='nav-item'>
-              <Link to = "about" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>about</Link>
+              <Link to = "about" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>About</Link>
             </li>
           </ul>
         </div>
